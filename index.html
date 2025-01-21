@@ -15,7 +15,7 @@
        /* Zmeev add */
       --base-letter-spacing: -1%;
       --heading-h1-font-weight: 600;
-      --heading-h2-font-weight: 700;
+      --heading-h2-font-weight: 800;
       /* End of Zmeev add */
       --theme-color: rgb(84, 107, 228);
       --link-color:  rgb(84, 107, 228);
@@ -37,10 +37,16 @@
     }
     .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
       white-space: unset
-        /*Zmeev add */
-      padding-top: 7.5em;
-        /* End of Zmeev add */
     }
+
+    /*Zmeev add */
+    .app-nav:not(:empty)~main .markdown-section {
+      padding-top: 7.5em;
+    }
+    .markdown-section h1 a[data-id], .markdown-section h2 a[data-id], .markdown-section h3 a[data-id], .markdown-section h4 a[data-id], .markdown-section h5 a[data-id], .markdown-section h6 a[data-id] {
+      letter-spacing: -0.025em;
+    }
+    /* End of Zmeev add */
     
     .github-corner {
       display: none
