@@ -10,8 +10,13 @@
   <title>Docsify Demo</title>
   <style>
     :root {
-      --base-font-family: Inter display, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --base-font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       --base-font-size: 16px;
+       /* Zmeev add */
+      --base-letter-spacing: -1%;
+      --heading-h1-font-weight: 600;
+      --heading-h2-font-weight: 700;
+      /* End of Zmeev add */
       --theme-color: rgb(84, 107, 228);
       --link-color:  rgb(84, 107, 228);
       --link-color--hover: rgb(137, 152, 100);
@@ -32,16 +37,20 @@
     }
     .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
       white-space: unset
+        /*Zmeev add */
+      padding-top: 7.5em;
+        /* End of Zmeev add */
     }
+    
     .github-corner {
       display: none
     }
-    @media (min-width: 48em) {
-      nav.app-nav {
-        margin-left: var(--sidebar-width);
-        padding: 1.5em 0 1.5em 0;
-      }
+   
+    nav.app-nav {
+      margin-left: var(--sidebar-width);
+      padding: 1.5em 0 1.5em 0;
     }
+     
     .app-nav {
       position: absolute;
       z-index: 30;
