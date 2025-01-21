@@ -8,6 +8,30 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
   <title>Docsify Demo</title>
+  <style>
+    :root {
+      --base-font-size: 16px;
+      --theme-color: rgb(104, 118, 52);
+      --link-color:  rgb(104, 118, 52);
+      --link-color--hover: rgb(137, 152, 100);
+      --sidebar-name-margin: 0;
+      --sidebar-name-padding: 0;
+      --code-font-size: .9em;
+    }
+    .sidebar > h1 {
+      margin-bottom: -.75em;
+      margin-top: .75em;
+    }
+    .sidebar > h1 img {
+      height: 4em;
+    }
+    .markdown-section a code {
+      color: var(--link-color)!important;
+    }
+    .markdown-section code:not([class*="lang-"]):not([class*="language-"]) {
+      white-space: unset
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
