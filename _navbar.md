@@ -1,5 +1,5 @@
 <!-- Logo -->
-[![](Neterial-logo.svg =100x100)](/)
+[![](navbar-logo.png)](/)
 
 <!-- Title -->
 Documentation
