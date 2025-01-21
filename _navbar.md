@@ -1,6 +1,3 @@
-<!-- Logo -->
-[![](navbar-logo.png)](/)
-
 <!-- Title -->
 Documentation
 
