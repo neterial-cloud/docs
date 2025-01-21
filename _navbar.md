@@ -1,6 +1,5 @@
-<!-- Title -->
-Documentation
-
+- [Website](https://neterial.io)
+- [Support](https://neterial.io/contact)
 - Translations
   - [:uk: English](/)
   - [:cn: 简体中文](/zh-cn/)
