@@ -56,7 +56,13 @@
       margin-left: var(--sidebar-width);
       padding: 1.18em 0 1.18em 0;
     }
-     
+
+    @media screen and (max-width: 600px) {
+      nav.app-nav {
+      display: none;
+      }
+    }
+    
     .app-nav {
       position: sticky; /* Zmeev: Changed to from absolute to sticke */
       z-index: 30;
