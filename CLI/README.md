@@ -1,5 +1,5 @@
-Neterial CLI
-============
+Command Line Interface (CLI)
+============================
 
 Command-line interface for [Neterial](https://neterial.io) services.
 
@@ -24,6 +24,8 @@ and receive €20 in Hetzner Cloud credits.
         ghcr.io/neterialio/cli init
     ```
 
+    and follow the instructions.
+
 2. Create a Kubernetes cluster
 
     ```sh
@@ -45,7 +47,7 @@ and receive €20 in Hetzner Cloud credits.
 
 ## More commands
 
-Creating cluster with a name
+Creating a cluster with a name
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
