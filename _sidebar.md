@@ -5,5 +5,6 @@
   * [AWS](./API-keys/AWS/index)
 * [Guides](./Guides/index)
   * [Ingress-nginx](./Guides/ingress-nginx/index)
+  * [CertManager](./Guides/CertManager/index)
 * [CLI](CLI/)
 * [About](./About/index)
