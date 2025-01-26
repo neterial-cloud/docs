@@ -8,7 +8,7 @@ wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/stat
 
 Modify Service with type LoadBalancer:
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
