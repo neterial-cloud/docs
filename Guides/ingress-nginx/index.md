@@ -52,7 +52,11 @@ Finally, install ingress-nginx:
 
 ```
 kubectl apply -f ingress-nginx.yaml
+```
 
+Output: 
+
+```
 namespace/ingress-nginx created
 serviceaccount/ingress-nginx created
 serviceaccount/ingress-nginx-admission created
