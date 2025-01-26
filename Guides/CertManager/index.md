@@ -1,5 +1,7 @@
 # CertManager installation
 
+## CertManager
+
 Officail documentatiuon: https://cert-manager.io/docs/installation/helm/ 
 
 Install CertManager CustomResourceDefinitions (CRDs):
@@ -76,3 +78,79 @@ mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook c
 validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
 ```
 
+## Issuer
+
+Create Issuer.yaml:
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: [issuer name]
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: [email]
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: [privateKeySecretRef]
+    # Enable the HTTP-01 challenge provider
+    solvers:
+      - http01:
+          ingress:
+            ingressClassName: nginx
+```
+
+Fill the following fileds:
+
+* name: - issuer name
+* email: - email is required by Let's Encrypt and used to notify you of certificate expiration and updates
+* privateKeySecretRef: - name of the sercret
+
+Install issuer:
+
+```
+kubectl apply -f issuer.yaml
+```
+
+Check:
+
+```
+$ kubectl describe issuers.cert-manager.io
+Name:         [name]
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+API Version:  cert-manager.io/v1
+Kind:         Issuer
+Metadata:
+  Creation Timestamp:  2024-02-14T23:32:58Z
+  Generation:          1
+  Resource Version:    1479945
+  UID:                 c023b6a1-789f-44c8-8a30-d7ecace38acc
+Spec:
+  Acme:
+    Email:  ak@neterial.io
+    Private Key Secret Ref:
+      Name:  [name]
+    Server:  https://acme-v02.api.letsencrypt.org/directory
+    Solvers:
+      http01:
+        Ingress:
+          Ingress Class Name:  nginx
+Status:
+  Acme:
+    Last Private Key Hash:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+    Last Registered Email:  [email]
+    Uri:                    https://acme-v02.api.letsencrypt.org/acme/acct/1570600057
+  Conditions:
+    Last Transition Time:  2024-02-14T23:32:58Z
+    Message:               The ACME account was registered with the ACME server
+    Observed Generation:   1
+    Reason:                ACMEAccountRegistered
+    Status:                True
+    Type:                  Ready
+Events:                    <none>
+```
