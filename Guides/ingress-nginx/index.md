@@ -75,3 +75,4 @@ validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admiss
 ```
 Load balancer will be created automalically:
 
+![security](img/hetzner-lb.png)
