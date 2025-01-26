@@ -73,3 +73,5 @@ job.batch/ingress-nginx-admission-patch created
 ingressclass.networking.k8s.io/nginx created
 validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admission created
 ```
+Load balancer will be created automalically:
+
