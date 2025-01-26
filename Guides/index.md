@@ -1,3 +1,3 @@
 # Installation guides
 
-* [ingress-nginx](ingress-nginx/index)
+* [ingress-nginx](./Guides/ingress-nginx/index)
