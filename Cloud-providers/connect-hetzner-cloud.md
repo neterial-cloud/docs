@@ -1,4 +1,7 @@
-# Generating an API token
+Connect Hetzner Cloud
+=====================
+
+## Generating an API token
 
 To generate an API token on your [Cloud Console](https://console.hetzner.cloud/), please open your project and do the following:
 
@@ -41,4 +44,3 @@ curl \
 	-H "Authorization: Bearer $API_TOKEN" \
     ...
 ```
-

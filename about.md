@@ -1,4 +1,5 @@
-# About
+About
+=====
 
 We help early-stage startups focused on developing their MVP to save money on cloud services. Entrepreneurs often struggle to deploy cloud infrastructure for their MVP in the most cost-efficient way. Options such as AWS, GCP, Azure may not be viable due to their extremely high costs, even with free tiers available. Alternatively, other solutions may require expertise to deploy all the necessary tools on your own.
 

@@ -1,17 +1,21 @@
-# Neterial documentation
+Neterial documentation
+======================
 
 Everything you need to know about Neterial.
 
-# Getting help
+## Connect your cloud
 
-Having trouble? We’d like to help!
+We use the BYOC (Bring-Your-Own-Cloud) model, so you need to connect your cloud to our system.
 
-* Try the [FAQ](/FAQ) – it’s got answers to many common questions.
-* Looking for specific information? Try the Index, Module Index or the detailed table of contents.
-* Not found anything? See FAQ: Getting Help for information on getting support and asking questions to the community.
-* Report bugs with Django in our ticket tracker.
+* [Connect Hetzner Cloud](Cloud-providers/connect-hetzner-cloud.md)
+* [Connect AWS](Cloud-providers/connect-aws.md)
 
-# How the documentation is organized
+## Our guides
 
-Neterial has a lot of documentation. A high-level overview of how it’s organized will help you know where to look for certain things:
+* [Install Ingress NGINX](Guides/ingress-nginx.md)
+* [Install cert-manager](Guides/cert-manager.md)
+
+## About us
+
+* [About](about.md) – Basic information 
 

@@ -1,4 +1,7 @@
-# Generating an API tokens
+Connect AWS
+===========
+
+## Generating an API tokens
 
 1. Open the [AWS Management Console](https://console.aws.amazon.com) and sign in using your root user credentials. For instructions, see [Sign in to the AWS Management Console as the root user](https://docs.aws.amazon.com/signin/latest/userguide/introduction-to-root-user-sign-in-tutorial.html) in the *AWS Sign-In User Guide*.
 2. In the upper right corner of the console, choose your account name or number and then choose **Security Credentials**.

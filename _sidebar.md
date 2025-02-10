@@ -1,10 +1,17 @@
 <!-- docs/_sidebar.md -->
 * [HOME](./)
-* [API keys](./API-keys/index)
-  * [Hetzner](./API-keys/Hetzner/index)
-  * [AWS](./API-keys/AWS/index)
-* [Guides](./Guides/index)
-  * [Ingress-nginx](./Guides/ingress-nginx/index)
-  * [CertManager](./Guides/CertManager/index)
-* [CLI](CLI/)
-* [About](./About/index)
+<!-- * [How it works](how-it-works.md) -->
+<!-- * [Get started](Get-started/) -->
+<!--  * [Create cluster](Get-started/create-cluster.md) -->
+<!--  * [Deploy your first app](Get-started/deploy-app.md) -->
+* [Cloud providers](/Cloud-providers/)
+  * [Connect Hetzner Cloud](/Cloud-providers/connect-hetzner-cloud.md)
+  * [Connect AWS](/Cloud-providers/connect-aws.md)
+<!--  * [Increase quotas](./Cloud-providers/quotas.md) -->
+* [Guides](/Guides/)
+  * [Install Ingress NGINX](/Guides/ingress-nginx.md)
+  * [Install cert-manager](/Guides/cert-manager.md)
+<!--  * [Use GitHub registry](./Guides/use-gh-registry.md) -->
+* [CLI](/CLI.md)
+<!-- * [FAQ](FAQ.md) -->
+* [About](/about.md)
