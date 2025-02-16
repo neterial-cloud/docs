@@ -1,21 +1,27 @@
-Neterial documentation
+Neterial Documentation
 ======================
 
 Everything you need to know about Neterial.
 
-## Connect your cloud
+## Connect Your Cloud
 
-We use the BYOC (Bring-Your-Own-Cloud) model, so you need to connect your cloud to our system.
+We use the BYOC (Bring-Your-Own-Cloud) model, so you need to connect your cloud provider to our system.
 
 * [Connect Hetzner Cloud](Cloud-providers/connect-hetzner-cloud.md)
 * [Connect AWS](Cloud-providers/connect-aws.md)
 
-## Our guides
+## Our Guides
 
 * [Install Ingress NGINX](Guides/ingress-nginx.md)
 * [Install cert-manager](Guides/cert-manager.md)
 
-## About us
+## Neterial CLI
 
-* [About](about.md) – Basic information 
+Use Neterial features directly from your terminal.
+
+* [Getting Started with CLI](CLI.md)
+
+## About Us
+
+* [About](about.md) – Learn more about Neterial.
 

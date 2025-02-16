@@ -1,17 +1,17 @@
-Command Line Interface (CLI)
-============================
+Neterial CLI
+============
 
 Command-line interface for [Neterial](https://neterial.io) services.
 
 ## Features
 
 - Install a Kubernetes cluster in your Hetzner Cloud account
-- Adding/removing worker nodes
-- Out-of-the-box: Cilium CNI, Metrics Server, Hetzner Cloud Controller Manager, Hetzner CSI
+- Add or remove worker nodes
+- Includes out-of-the-box support for Cilium CNI, Metrics Server, Hetzner Cloud Controller Manager, and Hetzner CSI.
 
 ## Quick start
 
-Creating a Kubernets cluster named `default` in your Hetzner Cloud account.
+Creating a Kubernetes cluster named `default` in your Hetzner Cloud account.
 
 You need to have a Hetzner Cloud account. If you don't have one yet, you can
 register with **[our referral link](https://hetzner.cloud/?ref=Ij0zPoexotZb)**
@@ -23,8 +23,6 @@ and receive €20 in Hetzner Cloud credits.
     docker run --pull=always --rm -ti -p 9999:9999 -v neterial:/app/config \
         ghcr.io/neterialio/cli init
     ```
-
-    and follow the instructions.
 
 2. Create a Kubernetes cluster
 
@@ -47,97 +45,95 @@ and receive €20 in Hetzner Cloud credits.
 
 ## More commands
 
-Creating a cluster with a name
+### Creating a cluster with a custom name
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
     --name thename
 ```
 
-List all clusters
+### Listing all clusters
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube get clusters
 ```
 
-Create cluster with 2 worker nodes and located in Ashburn USA
+### Creating a cluster with 2 worker nodes in Ashburn, USA
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
   --name thename --location ash --worker-count 2
 ```
 
-Show help and all flags for "kube create cluster" command
+### Showing help and available flags for the "kube create cluster" command
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster -h
 ```
 
-Add a node
+### Adding a node
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create node \
     --cluster thename
 ```
 
-Remove a node
+### Removing a node
 
 ```sh
 # List all nodes
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube get nodes \
     --cluster thename
 
-# Remove the one
+# Remove a specific node
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube delete node \
-    --cluster hello --node thenodename
+    --cluster thename --node thenodename
 ```
 
 ## Resources configuration (VM, CPU, RAM, DISK)
 
 You can choose the VM used for the worker. This is how you can control the compute capacity of your cluster.
 
-Adding a node with a specific configuration
+### Adding a node with a specific configuration
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create node \
     --cluster thename --vm-type VM_TYPE
 ```
 
-Creating cluster with a specific worker nodes
+### Creating a cluster with specific worker nodes
 
 ```sh
 docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
     --name thename --worker-vm-type VM_TYPE
 ```
 
-See
-**[the full list of VM-types](https://docs.hetzner.com/cloud/servers/overview/#server-types)**
+See the **[full list of VM types](https://docs.hetzner.com/cloud/servers/overview/#server-types)** for available options.
 
-## Clean up the system
+## Cleaning up the system
 
-1. Remove the cluster/clusters
+1. Remove a cluster or multiple clusters
 
     ```sh
     docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube delete cluster --name thename
     ```
 
-2. Remove the docker image
+2. Remove the Docker image
 
     ```sh
     docker rmi ghcr.io/neterialio/cli
     ```
 
-3. Remove the volume with config file
+3. Remove the volume with the config file
 
     ```sh
     docker volume rm neterial
     ```
 
-### Removing account
+### Removing your account
 
-> **Warning**  
-> This operation will remove your account completely.
->You will retain access to your clusters, but managing them using the Neterial platform will be unavailable.
+> **⚠️ Warning: This operation will permanently remove your Neterial account.**
+> You will still have access to your clusters, but you will no longer be able to manage them using the Neterial platform.
 
 ```sh
 docker run --rm -ti -v neterial:/app/config ghcr.io/neterialio/cli account delete
