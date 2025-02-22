@@ -2,7 +2,7 @@
 
 Get the current version:
 
-```
+```sh
 wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
 ```
 
@@ -50,13 +50,13 @@ Add to annotations following field:
 
 Finally, install ingress-nginx:
 
-```
+```sh
 kubectl apply -f ingress-nginx.yaml
 ```
 
 Output: 
 
-```
+```console
 namespace/ingress-nginx created
 serviceaccount/ingress-nginx created
 serviceaccount/ingress-nginx-admission created

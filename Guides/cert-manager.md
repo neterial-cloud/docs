@@ -6,13 +6,13 @@ Officail documentatiuon: https://cert-manager.io/docs/installation/helm/
 
 Install CertManager CustomResourceDefinitions (CRDs):
 
-```
+```sh
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.2/cert-manager.crds.yaml
 ```
 
 Output:
 
-```
+```console
 customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io created
 customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io created
@@ -23,13 +23,13 @@ customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io create
 
 Install Cert Manager:
 
-```
+```sh
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.2/cert-manager.yaml
 ```
 
 Output:
 
-```
+```console
 namespace/cert-manager created
 customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io unchanged
 customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io unchanged
@@ -111,13 +111,13 @@ Fill the following fileds:
 
 Install issuer:
 
-```
+```sh
 kubectl apply -f issuer.yaml
 ```
 
 Check:
 
-```
+```console
 $ kubectl describe issuers.cert-manager.io
 Name:         [name]
 Namespace:    default

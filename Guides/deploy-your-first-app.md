@@ -49,7 +49,7 @@ service/web-app created
 
 Run:
 
-```
+```sh
 kubectl get deployment web-app
 ```
 
