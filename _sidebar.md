@@ -1,5 +1,5 @@
 <!-- docs/_sidebar.md -->
-* [HOME](./)
+* [HOME](/)
 <!-- * [How it works](how-it-works.md) -->
 <!-- * [Get started](Get-started/) -->
 <!--  * [Create cluster](Get-started/create-cluster.md) -->
