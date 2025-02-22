@@ -12,6 +12,7 @@ We use the BYOC (Bring-Your-Own-Cloud) model, so you need to connect your cloud 
 
 ## Our Guides
 
+* [Deploy Your First App](Guides/deploy-your-first-app.md)
 * [Install Ingress NGINX](Guides/ingress-nginx.md)
 * [Install cert-manager](Guides/cert-manager.md)
 

@@ -9,6 +9,7 @@
   * [Connect AWS](/Cloud-providers/connect-aws.md)
 <!--  * [Increase quotas](./Cloud-providers/quotas.md) -->
 * [Guides](/Guides/)
+  * [Deploy Your First App](/Guides/deploy-your-first-app.md)
   * [Install Ingress NGINX](/Guides/ingress-nginx.md)
   * [Install cert-manager](/Guides/cert-manager.md)
 <!--  * [Use GitHub registry](./Guides/use-gh-registry.md) -->
