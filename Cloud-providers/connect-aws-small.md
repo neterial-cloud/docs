@@ -1,3 +1,4 @@
+To generate an API token, open created Project and complete the following steps:
 1. Open the [AWS Management Console](https://console.aws.amazon.com) and sign in using your root user credentials. For instructions, see [Sign in to the AWS Management Console as the root user](https://docs.aws.amazon.com/signin/latest/userguide/introduction-to-root-user-sign-in-tutorial.html) in the *AWS Sign-In User Guide*.
 2. In the upper right corner of the console, choose your account name or number and then choose **Security Credentials**.
 3. In the **Access keys** section, choose **Create access key**. If this option is not available, then you already have the maximum  number of access keys. You must delete one of the existing access keys  before you can create a new key. For more information, see [IAM Object Quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-quotas-entities).
