@@ -1,48 +1,33 @@
 # Ingress-nginx installation
 
-Get the current version:
+Official documentatiuon: [https://kubernetes.github.io/ingress-nginx/deploy/](https://kubernetes.github.io/ingress-nginx/deploy/)
 
-```sh
-wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+#### Step 1: Add the Ingress-NGINX Helm repository (if not already added)
+
+```bash
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
 ```
 
-Modify Service with type LoadBalancer:
+#### Step 2: Create a namespace (optional but recommended)
+
+```bash
+kubectl create namespace ingress-nginx
+```
+
+#### Step 3: Install Ingress-NGINX with Helm
+
+Example with LoadBalancer (Hetzner Cloud).
+
+Create a file named values.yaml:
 
 ```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  annotations:
-    load-balancer.hetzner.cloud/location: hel1
-  labels:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.9.6
-  name: ingress-nginx-controller
-  namespace: ingress-nginx
-spec:
-  externalTrafficPolicy: Local
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
-  ports:
-  - appProtocol: http
-    name: http
-    port: 80
-    protocol: TCP
-    targetPort: http
-  - appProtocol: https
-    name: https
-    port: 443
-    protocol: TCP
-    targetPort: https
-  selector:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: ingress-nginx
-  type: LoadBalancer
+controller:
+  service:
+    type: LoadBalancer
+    externalTrafficPolicy: Local
+    annotations:
+      load-balancer.hetzner.cloud/location: hel1
 ```
 
 Add to annotations following field:
@@ -50,33 +35,61 @@ Add to annotations following field:
 
 Finally, install ingress-nginx:
 
-```sh
-kubectl apply -f ingress-nginx.yaml
+```bash
+helm install ingress-nginx ingress-nginx/ingress-nginx \
+  --namespace ingress-nginx \
+  -f values.yaml
 ```
 
-Output: 
-
-```console
-namespace/ingress-nginx created
-serviceaccount/ingress-nginx created
-serviceaccount/ingress-nginx-admission created
-role.rbac.authorization.k8s.io/ingress-nginx created
-role.rbac.authorization.k8s.io/ingress-nginx-admission created
-clusterrole.rbac.authorization.k8s.io/ingress-nginx created
-clusterrole.rbac.authorization.k8s.io/ingress-nginx-admission created
-rolebinding.rbac.authorization.k8s.io/ingress-nginx created
-rolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
-clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx created
-clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
-configmap/ingress-nginx-controller created
-service/ingress-nginx-controller created
-service/ingress-nginx-controller-admission created
-deployment.apps/ingress-nginx-controller created
-job.batch/ingress-nginx-admission-create created
-job.batch/ingress-nginx-admission-patch created
-ingressclass.networking.k8s.io/nginx created
-validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admission created
-```
 Load balancer will be created automalically:
 
 ![security](img/hetzner-lb.png)
+
+#### Step 4: Verify installation
+
+Check if the pods are running correctly:
+
+```bash
+kubectl get pods --namespace ingress-nginx
+```
+
+Check the service status:
+
+```bash
+kubectl get svc --namespace ingress-nginx
+```
+
+Wait for ```EXTERNAL-IP``` if you're using a cloud-based load balancer.
+
+#### Step 5: Use Ingress Resources
+
+After installation, you can create Ingress resources in your applications:
+
+Example Ingress resource:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  namespace: your-app-namespace
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: your-service
+            port:
+              number: 80
+```
+
+Apply it with:
+
+```bash
+kubectl apply -f example-ingress.yaml
+```
