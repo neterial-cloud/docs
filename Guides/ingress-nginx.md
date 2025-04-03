@@ -1,6 +1,6 @@
 # Ingress-nginx installation
 
-Official documentatiuon: [https://kubernetes.github.io/ingress-nginx/deploy/](https://kubernetes.github.io/ingress-nginx/deploy/)
+Official documentation: [https://kubernetes.github.io/ingress-nginx/deploy/](https://kubernetes.github.io/ingress-nginx/deploy/)
 
 #### Step 1: Add the Ingress-NGINX Helm repository (if not already added)
 

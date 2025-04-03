@@ -2,7 +2,7 @@
 
 ## CertManager
 
-Officail documentatiuon: https://cert-manager.io/docs/installation/helm/ 
+Official documentation: https://cert-manager.io/docs/installation/helm/
 
 Install CertManager CustomResourceDefinitions (CRDs):
 
@@ -103,11 +103,11 @@ spec:
             ingressClassName: nginx
 ```
 
-Fill the following fileds:
+Fill the following fields:
 
 * name: - issuer name
 * email: - email is required by Let's Encrypt and used to notify you of certificate expiration and updates
-* privateKeySecretRef: - name of the sercret
+* privateKeySecretRef: - name of the secret
 
 Install issuer:
 
