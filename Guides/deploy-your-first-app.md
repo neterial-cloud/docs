@@ -113,7 +113,8 @@ service "web-app" deleted
 
 ## Next Steps
 
-One of the way to do it is using ingress with cert-manager.
+This is just a demo. For a production-ready deployment, you should use HTTPS.
+
 One way to achieve this is by using an Ingress controller with Cert-Manager.
 You can follow these guides to install them:
 
