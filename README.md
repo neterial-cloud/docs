@@ -1,7 +1,10 @@
-Neterial Documentation
-======================
+# Neterial Documentation
 
 Everything you need to know about Neterial.
+
+## Getting started
+
+Follow our **[Getting started guide](getting-started.md)**.
 
 ## Connect Your Cloud
 

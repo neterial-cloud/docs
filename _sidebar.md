@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 * [HOME](/)
 <!-- * [How it works](how-it-works.md) -->
-<!-- * [Get started](Get-started/) -->
+* [Getting started](getting-started.md)
 <!--  * [Create cluster](Get-started/create-cluster.md) -->
 <!--  * [Deploy your first app](Get-started/deploy-app.md) -->
 * [Cloud providers](/Cloud-providers/)
