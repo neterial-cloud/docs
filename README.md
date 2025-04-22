@@ -1,6 +1,7 @@
 # Neterial Documentation
 
-Everything you need to know about Neterial.
+A Kubernetes-based cloud platform that enables application management
+on AWS or Hetzner Cloud in a bring-your-own-cloud (BYOC) model.
 
 ## Getting started
 
