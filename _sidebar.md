@@ -16,3 +16,4 @@
 * [CLI](/CLI.md)
 <!-- * [FAQ](FAQ.md) -->
 * [About](/about.md)
+* [llms.txt](/llms.txt ':ignore')
