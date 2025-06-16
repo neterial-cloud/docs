@@ -1,143 +1,148 @@
-Neterial CLI
-============
+# Neterial CLI
 
 Command-line interface for [Neterial](https://neterial.io) services.
 
-## Features
+## Installation
 
-- Install a Kubernetes cluster in your Hetzner Cloud account
-- Add or remove worker nodes
-- Includes out-of-the-box support for Cilium CNI, Metrics Server, Hetzner Cloud Controller Manager, and Hetzner CSI.
+Linux, macOS (brew), and Windows WSL:
+
+```sh
+curl -sSL https://get.neterial.io/cli.sh | bash
+```
+
+Read [INSTALL.md](https://github.com/neterialio/cli/blob/main/INSTALL.md) for details and alternative ways to install.
 
 ## Quick start
 
-Creating a Kubernetes cluster named `default` in your Hetzner Cloud account.
+Run to login/signup and discover clouds:
+
+```sh
+neterial init
+```
+
+## Connect your cloud account
+
+Check your connected clouds:
+
+```sh
+neterial provider list
+```
+
+### Connect Hetzner Cloud
 
 You need to have a Hetzner Cloud account. If you don't have one yet, you can
 register with **[our referral link](https://hetzner.cloud/?ref=Ij0zPoexotZb)**
 and receive €20 in Hetzner Cloud credits.
 
-1. Login
+Read [how to create API token in Hetzner Cloud](Cloud-providers/connect-hetzner-cloud.md)
 
-    ```sh
-    docker run --pull=always --rm -ti -p 9999:9999 -v neterial:/app/config \
-        ghcr.io/neterialio/cli init
-    ```
-
-2. Create a Kubernetes cluster
-
-    ```sh
-    docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster
-    ```
-
-3. Get the kubeconfig
-
-    ```sh
-    docker run --rm -v neterial:/app/config \
-        ghcr.io/neterialio/cli kube get kubeconfig > default-kubeconfig
-    ```
-
-4. Work with your cluster
-
-    ```sh
-    kubectl --kubeconfig default-kubeconfig get nodes
-    ```
-
-## More commands
-
-### Creating a cluster with a custom name
+Connect your cloud by adding a Hetzner Cloud API token:
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
-    --name thename
+neterial provider init hcloud
 ```
 
-### Listing all clusters
+### Connect AWS
+
+Read [how to add AWS credentials](Cloud-providers/connect-aws.md)
+
+Connect your cloud by adding AWS credentials:
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube get clusters
+neterial provider init aws
 ```
 
-### Creating a cluster with 2 worker nodes in Ashburn, USA
+## Creating Kubernetes cluster
+
+### Creating with the name `default` in `hcloud` cloud
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
-  --name thename --location ash --worker-count 2
+neterial kube create cluster
 ```
 
-### Showing help and available flags for the "kube create cluster" command
+Get access to the cluster:
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster -h
+kubectl config use-context default-neterial-admin@default-neterial
+kubectl get nodes
 ```
 
-### Adding a node
+If you see the nodes, your cluster is ready for work.
+
+### Explicitly set the name and cloud provider
+
+The `--cloud` parameter accepts either `hcloud` or `aws`.
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create node \
-    --cluster thename
+neterial kube create cluster --name [CLUSTER_NAME] --cloud [CLOUD]
 ```
 
-### Removing a node
+### Explicitly set the worker VM type and number of workers
 
 ```sh
-# List all nodes
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube get nodes \
-    --cluster thename
+neterial kube create cluster --worker-vm-type [VM_TYPE] --worker-count [COUNT]
+```
 
-# Remove a specific node
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube delete node \
-    --cluster thename --node thenodename
+### Explicitly set the location
+
+```sh
+neterial kube create cluster --cloud [CLOUD] --location [LOCATION]
+```
+
+AWS:
+
+```sh
+neterial kube create cluster --cloud aws --location us-east-1
+```
+
+Hetzner Cloud:
+
+```sh
+neterial kube create cluster --cloud hcloud --location ash
 ```
 
 ## Resources configuration (VM, CPU, RAM, DISK)
 
 You can choose the VM used for the worker. This is how you can control the compute capacity of your cluster.
 
-### Adding a node with a specific configuration
+### Adding a worker node with a specific configuration
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create node \
-    --cluster thename --vm-type VM_TYPE
+neterial kube create node --cluster [CLUSTER_NAME] --vm-type [VM_TYPE]
 ```
 
 ### Creating a cluster with specific worker nodes
 
 ```sh
-docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube create cluster \
-    --name thename --worker-vm-type VM_TYPE
+neterial kube create cluster --name thename --worker-vm-type [VM_TYPE]
 ```
 
-See the **[full list of VM types](https://docs.hetzner.com/cloud/servers/overview/#server-types)** for available options.
+## Adding nodes to the existing cluster
 
-## Cleaning up the system
+```sh
+neterial kube create node --cluster [CLUSTER_NAME]
+```
 
-1. Remove a cluster or multiple clusters
+## Removing nodes from the existing cluster
 
-    ```sh
-    docker run --rm -v neterial:/app/config ghcr.io/neterialio/cli kube delete cluster --name thename
-    ```
+List all nodes:
 
-2. Remove the Docker image
+```sh
+neterial kube get nodes --cluster [CLUSTER_NAME]
+```
 
-    ```sh
-    docker rmi ghcr.io/neterialio/cli
-    ```
+Remove a specific node:
 
-3. Remove the volume with the config file
+```sh
+neterial kube delete node --cluster [CLUSTER_NAME] --node [NODE_NAME]
+```
 
-    ```sh
-    docker volume rm neterial
-    ```
-
-### Removing your account
+## Removing your account
 
 > **⚠️ Warning: This operation will permanently remove your Neterial account.**
 > You will still have access to your clusters, but you will no longer be able to manage them using the Neterial platform.
 
 ```sh
-docker run --rm -ti -v neterial:/app/config ghcr.io/neterialio/cli account delete
+neterial account delete
 ```
-
-That's it.
 

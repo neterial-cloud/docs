@@ -7,12 +7,6 @@ While simple, this example shows the idea.
 
 ## Step 1: Check That Your Cluster is Ready
 
-Run the command below, replacing "default-kubeconfig" with your kubeconfig file.
-
-```sh
-export KUBECONFIG="default-kubeconfig"
-```
-
 Run:
 
 ```sh
@@ -20,6 +14,12 @@ kubectl get nodes
 ```
 
 You should see a list of nodes like this (node names may vary).
+
+```console
+NAME                       STATUS   ROLES           AGE     VERSION
+nks-default-ctl-1d39beb8   Ready    control-plane   9m39s   v1.32.3
+nks-default-wrk-5a451893   Ready    <none>          8m35s   v1.32.3
+```
 
 If so, move to the next step.
 
@@ -89,7 +89,7 @@ Open the link in a browser. You should see a web page displaying:
 
 >welcome to my web app!
 
-**Note:** It can take several minutes for the application to become availabl
+**Note:** It can take several minutes for the application to become available.
 
 If you see the webpage, that means everything is working correctly
 and the application has been deployed successfully.
