@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Neterial
+# This file is distributed under the same license as the Neterial Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Neterial Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-30 22:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../connect-hetzner-cloud-small.rst:1
+msgid "To generate an API token on your `Cloud Console <https://console.hetzner.cloud/>`__, please open your project and do the following:"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:5
+msgid "Go to **Security** on the left menu bar"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:6
+msgid "Go to **API tokens** on the upper menu bar"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:7
+msgid "Select **Generate API token**"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:8
+msgid "Create your API token"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:10
+msgid "Enter a description in the upper text box."
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:11
+msgid "Choose a permission. You can choose between **Read** and **Read & Write**. If you select **Read**, the token will only be allowed to perform GET requests. If you select **Read & Write**, the token will be allowed to perform GET, DELETE, PUT and POST requests."
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:16
+msgid "Copy your API token"
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:18
+msgid "You now have an API token. Note that it is not possible to view the token again once the window has been closed."
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:21
+msgid "**Please note:** Your secret API token has to be included in **every request** you send to the API."
+msgstr ""
+
+#: ../connect-hetzner-cloud-small.rst:24
+msgid "Example `curl <https://curl.se/>`__:"
+msgstr ""

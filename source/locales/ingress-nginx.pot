@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Neterial
+# This file is distributed under the same license as the Neterial Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Neterial Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-30 22:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../ingress-nginx.rst:2
+msgid "Ingress-nginx installation"
+msgstr ""
+
+#: ../ingress-nginx.rst:4
+msgid "Official documentation: https://kubernetes.github.io/ingress-nginx/deploy/"
+msgstr ""
+
+#: ../ingress-nginx.rst:8
+msgid "Step 1: Add the Ingress-NGINX Helm repository (if not already added)"
+msgstr ""
+
+#: ../ingress-nginx.rst:16
+msgid "Step 2: Create a namespace (optional but recommended)"
+msgstr ""
+
+#: ../ingress-nginx.rst:23
+msgid "Step 3: Install Ingress-NGINX with Helm"
+msgstr ""
+
+#: ../ingress-nginx.rst:25
+msgid "Example with LoadBalancer (Hetzner Cloud)."
+msgstr ""
+
+#: ../ingress-nginx.rst:27
+msgid "Create a file named values.yaml:"
+msgstr ""
+
+#: ../ingress-nginx.rst:38
+msgid "Add to annotations following field: \\* ``load-balancer.hetzner.cloud/location`` - Hetzner network zone for LB placement"
+msgstr ""
+
+#: ../ingress-nginx.rst:42
+msgid "Finally, install ingress-nginx:"
+msgstr ""
+
+#: ../ingress-nginx.rst:50
+msgid "Load balancer will be created automalically:"
+msgstr ""
+
+#: ../ingress-nginx.rst:52
+#: ../ingress-nginx.rst:55
+msgid "security"
+msgstr ""
+
+#: ../ingress-nginx.rst:58
+msgid "Step 4: Verify installation"
+msgstr ""
+
+#: ../ingress-nginx.rst:60
+msgid "Check if the pods are running correctly:"
+msgstr ""
+
+#: ../ingress-nginx.rst:66
+msgid "Check the service status:"
+msgstr ""
+
+#: ../ingress-nginx.rst:72
+msgid "Wait for ``EXTERNAL-IP`` if you're using a cloud-based load balancer."
+msgstr ""
+
+#: ../ingress-nginx.rst:75
+msgid "Step 5: Use Ingress Resources"
+msgstr ""
+
+#: ../ingress-nginx.rst:77
+msgid "After installation, you can create Ingress resources in your applications:"
+msgstr ""
+
+#: ../ingress-nginx.rst:80
+msgid "Example Ingress resource:"
+msgstr ""
+
+#: ../ingress-nginx.rst:103
+msgid "Apply it with:"
+msgstr ""

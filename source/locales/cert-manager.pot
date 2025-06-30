@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Neterial
+# This file is distributed under the same license as the Neterial Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Neterial Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-30 22:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../cert-manager.rst:2
+msgid "CertManager installation"
+msgstr ""
+
+#: ../cert-manager.rst:5
+msgid "CertManager"
+msgstr ""
+
+#: ../cert-manager.rst:7
+msgid "Official documentation: https://cert-manager.io/docs/installation/helm/"
+msgstr ""
+
+#: ../cert-manager.rst:9
+msgid "Install CertManager CustomResourceDefinitions (CRDs):"
+msgstr ""
+
+#: ../cert-manager.rst:15
+#: ../cert-manager.rst:32
+msgid "Output:"
+msgstr ""
+
+#: ../cert-manager.rst:26
+msgid "Install Cert Manager:"
+msgstr ""
+
+#: ../cert-manager.rst:84
+msgid "Issuer"
+msgstr ""
+
+#: ../cert-manager.rst:86
+msgid "Create Issuer.yaml:"
+msgstr ""
+
+#: ../cert-manager.rst:109
+msgid "Fill the following fields:"
+msgstr ""
+
+#: ../cert-manager.rst:111
+msgid "name: - issuer name"
+msgstr ""
+
+#: ../cert-manager.rst:112
+msgid "email: - email is required by Let’s Encrypt and used to notify you of certificate expiration and updates"
+msgstr ""
+
+#: ../cert-manager.rst:114
+msgid "privateKeySecretRef: - name of the secret"
+msgstr ""
+
+#: ../cert-manager.rst:116
+msgid "Install issuer:"
+msgstr ""
+
+#: ../cert-manager.rst:122
+msgid "Check:"
+msgstr ""

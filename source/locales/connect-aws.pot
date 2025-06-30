@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Neterial
+# This file is distributed under the same license as the Neterial Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Neterial Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-30 22:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../connect-aws.rst:2
+msgid "Connect AWS"
+msgstr ""
+
+#: ../connect-aws.rst:5
+msgid "Generating an API tokens"
+msgstr ""
+
+#: ../connect-aws.rst:7
+msgid "Open the `AWS Management Console <https://console.aws.amazon.com>`__ and sign in using your root user credentials. For instructions, see `Sign in to the AWS Management Console as the root user <https://docs.aws.amazon.com/signin/latest/userguide/introduction-to-root-user-sign-in-tutorial.html>`__ in the *AWS Sign-In User Guide*."
+msgstr ""
+
+#: ../connect-aws.rst:12
+msgid "In the upper right corner of the console, choose your account name or number and then choose **Security Credentials**."
+msgstr ""
+
+#: ../connect-aws.rst:14
+msgid "In the **Access keys** section, choose **Create access key**. If this option is not available, then you already have the maximum number of access keys. You must delete one of the existing access keys before you can create a new key. For more information, see `IAM Object Quotas <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-quotas-entities>`__."
+msgstr ""
+
+#: ../connect-aws.rst:19
+msgid "On the **Alternatives to root user access keys** page, review the security recommendations. To continue, select the checkbox, and then choose **Create access key**."
+msgstr ""
+
+#: ../connect-aws.rst:22
+msgid "On the **Retrieve access key** page, your **Access key** ID is displayed."
+msgstr ""
+
+#: ../connect-aws.rst:24
+msgid "Under **Secret access key**, choose **Show** and then copy the access key ID and secret key from your browser window and paste it somewhere secure. Alternatively, you can choose **Download .csv file** which will download a file named ``rootkey.csv`` that contains the access key ID and the secret key. Save the file somewhere safe."
+msgstr ""
+
+#: ../connect-aws.rst:29
+msgid "Choose **Done**. When you no longer need the access key `we recommend that you delete it <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user_manage_delete-key.html>`__, or at least consider deactivating it so that no one can misuse it."
+msgstr ""

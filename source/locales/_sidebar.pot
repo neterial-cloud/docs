@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Neterial
+# This file is distributed under the same license as the Neterial Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Neterial Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-30 22:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../_sidebar.rst:5
+msgid "`HOME </>`__"
+msgstr ""
+
+#: ../_sidebar.rst:6
+msgid "`Getting started </getting-started.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:7
+msgid "`Cloud providers </Cloud-providers/>`__"
+msgstr ""
+
+#: ../_sidebar.rst:9
+msgid "`Connect Hetzner Cloud </Cloud-providers/connect-hetzner-cloud.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:11
+msgid "`Connect AWS </Cloud-providers/connect-aws.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:13
+msgid "`Guides </Guides/>`__"
+msgstr ""
+
+#: ../_sidebar.rst:15
+msgid "`Deploy Your First App </Guides/deploy-your-first-app.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:16
+msgid "`Install Ingress NGINX </Guides/ingress-nginx.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:17
+msgid "`Install cert-manager </Guides/cert-manager.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:19
+msgid "`CLI </CLI.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:20
+msgid "`About </about.md>`__"
+msgstr ""
+
+#: ../_sidebar.rst:21
+msgid "`llms.txt </llms.txt>`__"
+msgstr ""
