@@ -1,2 +1,0 @@
-- [Neterial Homepage](https://neterial.io)
-- [Support](https://neterial.io/contact)

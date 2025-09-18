@@ -1,32 +1,22 @@
 # Neterial Documentation
 
-A Kubernetes-based cloud platform that enables application management
-on AWS or Hetzner Cloud in a bring-your-own-cloud (BYOC) model.
+## Live Documentation
 
-## Getting started
+The live documentation is available at [docs.neterial.cloud](https://docs.neterial.cloud).
 
-Follow our **[Getting started guide](getting-started.md)**.
+## Development
 
-## Connect Your Cloud
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
 
-We use the BYOC (Bring-Your-Own-Cloud) model, so you need to connect your cloud provider to our system.
+```sh
+npm i -g mint
+```
 
-* [Connect Hetzner Cloud](Cloud-providers/connect-hetzner-cloud.md)
-* [Connect AWS](Cloud-providers/connect-aws.md)
+Run the following command at the root of your documentation, where your `docs.json` is located:
 
-## Our Guides
+```sh
+mint dev
+```
 
-* [Deploy Your First App](Guides/deploy-your-first-app.md)
-* [Install Ingress NGINX](Guides/ingress-nginx.md)
-* [Install cert-manager](Guides/cert-manager.md)
-
-## Neterial CLI
-
-Use Neterial features directly from your terminal.
-
-* [Getting Started with CLI](CLI.md)
-
-## About Us
-
-* [About](about.md) – Learn more about Neterial.
+View your local preview at `http://localhost:3000`.
 

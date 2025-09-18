@@ -1,0 +1,101 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "Neterial Documentation",
+  "colors": {
+    "primary": "#546BE4",
+    "light": "#546BE4",
+    "dark": "#546BE4"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "Cloud Providers",
+            "pages": [
+              "cloud-providers/connect-aws",
+              "cloud-providers/connect-hetzner-cloud"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/deploy-your-first-app",
+              "guides/ingress-nginx",
+              "guides/cert-manager"
+            ]
+          },
+          {
+            "group": "CLI",
+            "pages": [
+              "guides/cli"
+            ]
+          }
+        ]
+      }   
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Neterial Website",
+          "href": "https://neterial.io",
+          "icon": "globe"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://neterial.io/blog",
+          "icon": "newspaper"
+        },
+        {
+          "anchor": "Support",
+          "href": "https://neterial.io/contact",
+          "icon": "headset"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Sign-Up",
+        "href": "https://console.neterial.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Sign-In",
+      "href": "https://console.neterial.io"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/neterial-cloud",
+      "linkedin": "https://linkedin.com/company/neterial"
+    }
+  }
+}

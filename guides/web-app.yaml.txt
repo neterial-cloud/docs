@@ -5,7 +5,6 @@ metadata:
   name: web-app
   labels:
     app.kubernetes.io/name: web-app
-  name: web-app
 spec:
   replicas: 1
   selector:
